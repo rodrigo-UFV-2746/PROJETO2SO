@@ -12,7 +12,5 @@ INSTRUÇÕES PARA EXECUÇÃO DO GERENCIADOR DE MEMÓRIA:
 2ª NO TERMINAL EXECUTE O SEGUINTE COMANDO 'gcc -Wall vmm.c -o vmm'
 3ª APÓS EXECUTAR O COMANDO 'gcc -Wall vmm.c -o vmm' EXECUTE O COMANDO './vmm random 10 < anomaly.dat' PARA O ALGORITMO RANDOM  OU './vmm fifo 10 < anomaly.dat' PARA O ALGORITMO FIFO.
 
-OBS.:
-
 TRABALHO DISPONÍVEL NO LINK A SEGUIR:
     https://github.com/rodrigo-UFV-2746/PROJETO2SO.git

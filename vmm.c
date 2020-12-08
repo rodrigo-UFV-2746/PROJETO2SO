@@ -39,19 +39,21 @@ typedef struct {
 //
 // Adicione mais parâmetros caso ache necessário
 
-int fifo(int8_t** page_table, int num_pages, int prev_page, int fifo_frm, int num_frames, int clock) {
+int fifo(int8_t** page_table, int num_pages, int prev_page, int fifo_frm,
+                int num_frames,int clock) {
     int i = 0;
 	while(i < num_pages){
-		// se o frame armazenado pelo fifo_frm for igual ao endereço na tabela
-        // acontece page fault
+        // o fifo_frm aponta para a primeira moldura que entrou na fila
+        // portanto, ela será a primeira a sair da fila
 		if (page_table[i][PT_FRAMEID] == fifo_frm) {
-			//printf("fifo_frm = %d\ni = %d\n\n", fifo_frm, i);
+			// se o frame armazenado pelo fifo_frm for igual ao
+            // endereço na tabela, acontece page fault
+            // printf("vitima = %d\nmoldura = %d\n\n", fifo_frm, i);
 			return i;
 		}
         i++;
 	}
     return -1;
-    
 }
 
 int second_chance(int8_t** page_table, int num_pages, int prev_page, int fifo_frm, int num_frames, int clock) {
@@ -97,6 +99,7 @@ int simulate(int8_t **page_table, int num_pages, int *prev_page, int *fifo_frm, 
 
     if (page_table[virt_addr][PT_MAPPED] == 1) {
         page_table[virt_addr][PT_REFERENCE_BIT] = 1;
+        //printf("Not Page Fault!\n");
         return 0; // Not Page Fault!
     }
 
@@ -139,7 +142,7 @@ int simulate(int8_t **page_table, int num_pages, int *prev_page, int *fifo_frm, 
         for (int i = 0; i < num_pages; i++)
             page_table[i][PT_REFERENCE_BIT] = 0;
     }
-
+    //printf("Page Fault!\n");
     return 1; // Page Fault!
 }
 
