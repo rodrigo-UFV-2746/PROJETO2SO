@@ -7,14 +7,12 @@
   ALUNOS: 2746 RODRIGO DE OLIVEIRA COSTA
           6010 JOÃO VITOR AZEVEDO 
 
-INSTRUÇÕES PARA EXECUÇÃO DO GERENCIADOR DE MEMORIA:
-1ª ABRA O TERMINAL NA PASTA QUE CONTEM OS ARQUIVOS vmm.c , anomaly.dat , readme.txt
-2ª NO TERMINAL EXECUTE O SEGUITE COMANDO 'gcc -Wall vmm.c -o vmm'
-3ª APOS EXECUTAR O COMANDO 'gcc -Wall vmm.c -o vmm' EXECUTE O COMANDO './vmm random 10 < anomaly.dat' para o algoritmo random  ou './vmm fifo 10 < anomaly.dat' para o algotritmo fifo.
-
+INSTRUÇÕES PARA EXECUÇÃO DO GERENCIADOR DE MEMÓRIA:
+1ª ABRA O TERMINAL NA PASTA QUE CONTÉM OS ARQUIVOS vmm.c , anomaly.dat , readme.txt
+2ª NO TERMINAL EXECUTE O SEGUINTE COMANDO 'gcc -Wall vmm.c -o vmm'
+3ª APÓS EXECUTAR O COMANDO 'gcc -Wall vmm.c -o vmm' EXECUTE O COMANDO './vmm random 10 < anomaly.dat' PARA O ALGORITMO RANDOM  OU './vmm fifo 10 < anomaly.dat' PARA O ALGORITMO FIFO.
 
 OBS.:
 
-
-TRABALHO DISPONIVEL NO LINK A SEGUIR:
+TRABALHO DISPONÍVEL NO LINK A SEGUIR:
     https://github.com/rodrigo-UFV-2746/PROJETO2SO.git
